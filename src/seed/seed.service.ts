@@ -14,6 +14,7 @@ export class SeedService {
 
       const segments = url.split('/');
       const no = +segments[segments.length - 2];
+      
       console.log({name, no});
     })
 

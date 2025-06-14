@@ -24,6 +24,19 @@ export class PokemonService {
     }
   }
 
+  async createMany(createPokemonDto: CreatePokemonDto[]){
+
+      createPokemonDto.forEach(createPokemonDto => {
+      createPokemonDto.name = createPokemonDto.name.toLowerCase();
+    });
+    try {
+      await this.pokemonModel.insertMany(createPokemonDto)
+    } catch (error) {
+      console.log(error)
+      this.handleExceptions(error);
+    }
+  }
+
   findAll() {
     return `This action returns all pokemon`;
   }

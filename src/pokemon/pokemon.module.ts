@@ -16,7 +16,13 @@ import { Pokemon, PokemonSchema } from './entities/pokemon.entity';
     ])
   ],
   exports: [
-    PokemonService
+    PokemonService,
+    MongooseModule.forFeature([
+      {
+        name: Pokemon.name,
+        schema: PokemonSchema,
+      }
+    ])
   ]
 })
 export class PokemonModule {}

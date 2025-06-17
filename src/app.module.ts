@@ -19,8 +19,6 @@ import { SeedModule } from './seed/seed.module';
     CommonModule,
     
     SeedModule,
-    
-    
   ],
   controllers: [],
   providers: [],

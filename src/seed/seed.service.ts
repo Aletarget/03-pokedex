@@ -31,5 +31,6 @@ export class SeedService {
     })
     
     this.pokemonService.createMany(pokemons)
+    return 'Seed executed'
   }
 }
